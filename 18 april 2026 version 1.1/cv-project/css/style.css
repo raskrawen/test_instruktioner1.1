@@ -1,0 +1,490 @@
+/* ===================================
+   Global Styles & Color Theme
+   =================================== */
+
+:root {
+    /* Green analog color palette */
+    --green-dark: #1a5f2a;
+    --green-medium: #2d8f3e;
+    --green-light: #6bc34a;
+    --green-lime: #b3e5fc;
+    --green-forest: #1b5e20;
+    
+    /* Neutral colors */
+    --dark: #212529;
+    --light: #f8f9fa;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --border-color: #e0e0e0;
+}
+
+/* ===================================
+   Dark Mode (Default - Green Theme)
+   =================================== */
+
+body {
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: var(--text-dark);
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* ===================================
+   Navigation Bar
+   =================================== */
+
+.custom-navbar {
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-medium) 100%) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .custom-navbar {
+    background: linear-gradient(135deg, #0d3d17 0%, #1a5f2a 100%) !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #ffffff !important;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--green-light) !important;
+}
+
+#themeToggle {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+#themeToggle:hover {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    color: var(--green-light) !important;
+}
+
+/* ===================================
+   Hero Section
+   =================================== */
+
+.hero-section {
+    background: linear-gradient(135deg, var(--green-medium) 0%, var(--green-dark) 100%);
+    color: #ffffff;
+    padding: 80px 0;
+}
+
+body.dark-mode .hero-section {
+    background: linear-gradient(135deg, #1a5f2a 0%, #0d3d17 100%);
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border: 4px solid #ffffff;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section h1 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+}
+
+.hero-section p {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* ===================================
+   Sections & Typography
+   =================================== */
+
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--green-light);
+}
+
+body.dark-mode .section-title {
+    color: var(--green-light);
+    border-bottom-color: var(--green-medium);
+}
+
+.section p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+body.dark-mode .section p {
+    color: #b0b0b0;
+}
+
+/* ===================================
+   Background Alternation
+   =================================== */
+
+section:nth-child(even) {
+    background-color: #f0f8f0;
+}
+
+body.dark-mode section:nth-child(even) {
+    background-color: #1f2f1f;
+}
+
+/* ===================================
+   Cards & Components
+   =================================== */
+
+.experience-item,
+.workshop-item,
+.education-item,
+.skill-card,
+.reference-item {
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .experience-item,
+body.dark-mode .workshop-item,
+body.dark-mode .education-item,
+body.dark-mode .skill-card,
+body.dark-mode .reference-item {
+    background-color: #2a2a2a !important;
+    color: #e0e0e0;
+}
+
+.experience-item:hover,
+.workshop-item:hover,
+.education-item:hover,
+.skill-card:hover,
+.reference-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(45, 143, 62, 0.15);
+}
+
+body.dark-mode .experience-item:hover,
+body.dark-mode .workshop-item:hover,
+body.dark-mode .education-item:hover,
+body.dark-mode .skill-card:hover,
+body.dark-mode .reference-item:hover {
+    box-shadow: 0 8px 20px rgba(107, 195, 74, 0.2);
+}
+
+.experience-item h3,
+.workshop-item h3,
+.education-item h3,
+.skill-card h5 {
+    color: var(--green-dark);
+}
+
+body.dark-mode .experience-item h3,
+body.dark-mode .workshop-item h3,
+body.dark-mode .education-item h3,
+body.dark-mode .skill-card h5 {
+    color: var(--green-light);
+}
+
+.reference-item {
+    border-left: 4px solid var(--green-light);
+}
+
+body.dark-mode .reference-item {
+    border-left-color: var(--green-medium);
+}
+
+/* ===================================
+   Form Styles
+   =================================== */
+
+.form-control {
+    border-color: var(--green-light);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--green-medium);
+    box-shadow: 0 0 0 0.2rem rgba(107, 195, 74, 0.25);
+}
+
+body.dark-mode .form-control {
+    background-color: #3a3a3a;
+    border-color: var(--green-medium);
+    color: #e0e0e0;
+}
+
+body.dark-mode .form-control:focus {
+    background-color: #3a3a3a;
+    border-color: var(--green-light);
+    color: #e0e0e0;
+    box-shadow: 0 0 0 0.2rem rgba(107, 195, 74, 0.4);
+}
+
+.form-label {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+body.dark-mode .form-label {
+    color: #e0e0e0;
+}
+
+/* ===================================
+   Buttons
+   =================================== */
+
+.btn-success {
+    background-color: var(--green-medium);
+    border-color: var(--green-medium);
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: var(--green-dark);
+    border-color: var(--green-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(45, 143, 62, 0.3);
+}
+
+/* ===================================
+   Contact Info
+   =================================== */
+
+.contact-info a {
+    color: var(--green-medium);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--green-dark);
+    text-decoration: underline;
+}
+
+body.dark-mode .contact-info a {
+    color: var(--green-light);
+}
+
+body.dark-mode .contact-info a:hover {
+    color: #90ee90;
+}
+
+/* ===================================
+   Footer
+   =================================== */
+
+footer {
+    background-color: var(--green-dark) !important;
+    border-top: 3px solid var(--green-light);
+    margin-top: 60px;
+}
+
+body.dark-mode footer {
+    background-color: #0d3d17 !important;
+    border-top-color: var(--green-medium);
+}
+
+/* ===================================
+   Accessibility & Dark Mode
+   =================================== */
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .bg-light {
+    background-color: #2a2a2a !important;
+}
+
+body.dark-mode .bg-white {
+    background-color: #2a2a2a !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--green-light);
+}
+
+body.dark-mode .text-muted {
+    color: #b0b0b0 !important;
+}
+
+/* ===================================
+   Black & White Mode
+   =================================== */
+
+body.bw-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.bw-mode .custom-navbar {
+    background: #000000 !important;
+}
+
+body.bw-mode .hero-section {
+    background: #333333;
+    color: #ffffff;
+}
+
+body.bw-mode section:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+body.bw-mode .section-title {
+    color: #000000;
+    border-bottom-color: #666666;
+}
+
+body.bw-mode .btn-success {
+    background-color: #333333;
+    border-color: #333333;
+}
+
+body.bw-mode .btn-success:hover {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+body.bw-mode .experience-item,
+body.bw-mode .workshop-item,
+body.bw-mode .education-item,
+body.bw-mode .skill-card,
+body.bw-mode .reference-item {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #cccccc;
+}
+
+body.bw-mode .experience-item h3,
+body.bw-mode .workshop-item h3,
+body.bw-mode .education-item h3,
+body.bw-mode .skill-card h5 {
+    color: #000000;
+}
+
+body.bw-mode footer {
+    background-color: #000000 !important;
+    color: #ffffff;
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 50px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        padding: 0.5rem 0;
+    }
+
+    .skill-card {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .btn-success {
+        width: 100%;
+    }
+}
+
+/* ===================================
+   Smooth Scroll
+   =================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===================================
+   Animations
+   =================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    animation: fadeIn 0.6s ease-in;
+}
