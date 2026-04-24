@@ -93,7 +93,7 @@ contactForm.addEventListener('submit', async function(e) {
     
     // Formspree endpoint - skal opdateres med dit eget form-ID
     // Se README.md for instruktioner
-    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xqewnkyd';
     
     try {
         const formData = new FormData(contactForm);
